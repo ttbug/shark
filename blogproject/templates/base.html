@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+    <title>一蓑烟雨任平生</title>
+    <!-- BOOTSTRAP CORE STYLE CSS -->
+    {% load staticfiles %}
+    <link href="{% static 'blog/css/bootstrap.css' %}" rel="stylesheet" />
+    <!-- FONTAWESOME STYLE CSS -->
+    <link href="{% static 'blog/css/font-awesome.css' %}" rel="stylesheet" />
+    <!-- CUSTOM STYLE CSS -->
+    <link href="{% static 'blog/css/style.css' %}" rel="stylesheet" />
+    <link href="{% static 'blog/css/friendly.css' %}" rel="stylesheet" />
+</head>
+<body>
+
+
+    <section class="header-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                  <img src="{% static 'blog/img/person.jpg' %}" class="img-circle img-responsive" />
+                </div>
+                <div class="col-md-5 text-center">
+                    <h1><strong>Colin Hu </strong></h1>
+                    <h4>Blogger & Coder</h4>
+                </div>
+                <div class="col-md-5">
+                    <h3>WHO M I :</h3>
+
+                     爱生活，爱编程
+                     You can reach me at <i><strong>ttbuge@gmail.com</strong></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--HOME SECTION END-->
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 spon-txt">
+                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;一蓑烟雨任平生</span>
+                </div>
+                <div class="col-md-10">
+                  <img src="{% static 'blog/img/clients.png' %}" alt="" class="img-rounded img-responsive" />
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <!--SPONSORS SECTION END-->
+    <hr />
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                  {% block content %}
+                    {% endblock content %}
+                    <!--BLOG ONE END -->
+                    <nav>
+                        <ul class="pagination">
+                            <li class="disabled"><a href="#"><span aria-hidden="true">&laquo;</span><span class="sr-only">Previous</span></a></li>
+                            <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                            <li><a href="#">2 <span class="sr-only"></span></a></li>
+                            <li><a href="#">3 <span class="sr-only"></span></a></li>
+                            <li><a href="#">4 <span class="sr-only"></span></a></li>
+                            <li><a href="#">5 <span class="sr-only"></span></a></li>
+                            <li><a href="#"><span aria-hidden="true">&raquo;</span><span class="sr-only">Next</span></a></li>
+                        </ul>
+                    </nav>
+                     <!--PAGING  END -->
+                </div>
+                <div class="col-md-3">
+
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <strong>文章分类</strong>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">104</span>
+                            Technology 
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">34</span>
+                            Blogging 
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">10</span>
+                            Information 
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">50</span>
+                            Security 
+                        </li>
+                        <li class="list-group-item">
+                            <strong>其他分类</strong>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">104</span>
+                            Technology 
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">34</span>
+                            Blogging 
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">10</span>
+                            Information 
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">50</span>
+                            Security 
+                        </li>
+                    </ul>
+                    <br />
+
+                    <ul class="list-group">
+                        <li class="list-group-item">最新文章
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#">
+                                <img src="assets/img/ad1.jpg" class="img-responsive" />
+                            </a>
+                            <br />
+                            <a href="#">
+                                <img src="assets/img/ad2.jpg" class="img-responsive" />
+                            </a>
+                        </li>
+                    </ul>
+
+                    <br />
+                    <div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Subscribe For Updates</h3>
+                            </div>
+                            <div class="panel-body">
+                                <input type="text" class="form-control" placeholder="Your Email" />
+                                <hr />
+                                <a href="#" class="btn btn-info btn-sm btn-block">subscribe</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+    <hr />
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center set-foot">
+                &copy 2017 Colin Hu | 一蓑烟雨任平生
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

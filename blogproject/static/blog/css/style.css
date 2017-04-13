@@ -2,112 +2,59 @@
 /* =============================================================
    GENERAL STYLES
  ============================================================ */
-@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+html, body {
+    padding-top:0px;
+    margin:0px;
+}
 body {
-    font-family: 'Montserrat', sans-serif;
-    line-height:30px;
-    color:rgb(39, 38, 38);
-    
-}
-.head-line {
-    padding-top:50px;
-    font-size:40px;
-    font-weight:900;
-    padding-bottom:30px;
-}
-
-/* =============================================================
-   HEADER STYLES
- ============================================================ */
-#header {
-    background-color: #0C739B;
-     background: url(../img/1.jpg) no-repeat center center;
-    padding: 0;
-    -webkit-background-size: cover;
-    background-size: cover;
-    -moz-background-size: cover;
-    color:#E2E2E2;
-}
- #header .overlay {
-        background-color:rgba(2, 2, 2, 0.56);
-        min-height:250px;
-    }
-.logo-div {
-    line-height:23px;
-}
-
-.logo-inner {
-    font-size: 30px;
-    font-weight: 900;
-    padding: 60px 20px 50px 20px;
-    text-align: center;
-    line-height: 23px;
-}
-
-.logo-name img {
-    height:150px;
-    width:150px;
-}
-.logo-inner span {
-    display: block;
-}
-
-.logo-name a, .logo-name a:hover {
-    color: rgba(147, 209, 234, 1);
-    text-decoration: none;
-    font-size: 16px;
-}
-
-.header-text-top {
-padding: 50px 30px 40px 30px;
-line-height: 30px;
-font-weight: 900;
-}
-
-    .header-text-top a, .header-text-top a:hover {
-        text-decoration: none;
-    }
-
-
-   
- /* =============================================================
-   INFO SECTION STYLES
- ============================================================ */
-
-.info-sec {
-    background-color: #000000;
-padding: 20px 50px 10px 50px;
-color: #FFFFFF;
-}
-.social-link a, .social-link a:hover {
-    text-decoration:none;
-    margin-right:10px;
-}
-
- /* =============================================================
-  BLOG POST STYLE
- ============================================================ */
-.blog-post {
-    padding-bottom:30px;
-    border-bottom:2px solid #f4f4f4;
-    padding-top:30px;
-}
-    .blog-post a, .blog-post a:hover {
-        text-decoration:none;
-    }
-.blog-post h1 {
-    font-size:30px;
-    line-height:50px;
-}
-.blog-post h4 {
-    font-size:20px;
+    font-family: 'Open Sans', sans-serif;
     line-height:25px;
+    font-size:14px;
 }
-.blog-post p {
-     font-size:20px;
-    line-height:30px;
-    padding-bottom:20px;
-    padding-top:10px;
+
+
+.header-section {
+  background-color:#065883;
+  color:#fff;
+  padding:40px 5px;
+}
+    .header-section img {
+        max-width:150px;
+        border:2px solid #fff;
+    }
+
+.spon-txt {
+    padding:40px 5px;
+    font-size:25px;
+    font-weight:800;
+}
+
+.blog-main {
+    padding:10px 5px;
+    border-bottom:2px solid #065883;
+    margin-bottom:30px;
+}
+.heading-blog {
+    font-size:30px;
+    color:#065883;
+    font-weight:800;
+    padding:30px 5px;
+    line-height:40px;
+}
+.blog-info {
+    padding:20px 5px; 
+    font-size:20px;
+    font-weight:normal;
+}
+.blog-txt {
+    padding:20px 5px; 
+    font-family:Andalus ;
+    font-size:20px;    
+    font-weight:normal;
+}
+.set-foot {
+    padding:20px 5px;
 }
 .copyrights{
 	text-indent:-9999px;
@@ -115,17 +62,4 @@ color: #FFFFFF;
 	line-height:0;
 	font-size:0;
 	overflow:hidden;
-}
- /* =============================================================
-   FOOTER SECTION STYLES
- ============================================================ */
-.footer-sec {
-    background-color:#000000;
-     margin-top:50px;
-}
-.foo-inner {
-    text-align:right;
-    padding:20px 30px;
-    color:#fff;
-   
 }
