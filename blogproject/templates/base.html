@@ -1,3 +1,4 @@
+{% load blog_tags %}
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -82,58 +83,37 @@
 
                     <ul class="list-group">
                         <li class="list-group-item">
-                            <strong>文章分类</strong>
+                            <strong>文章标签</strong>
                         </li>
+                        {% get_categories as category_list %}
+                        {% for category in category_list %}
                         <li class="list-group-item">
-                            <span class="badge">104</span>
-                            Technology 
+                            <a href="#">{{category.name}}</a>
                         </li>
+                        {% endfor %}
                         <li class="list-group-item">
-                            <span class="badge">34</span>
-                            Blogging 
+                            <strong>文章归档</strong>
                         </li>
+                        {% archives as date_list %}
+                        {% for date in date_list %}
                         <li class="list-group-item">
-                            <span class="badge">10</span>
-                            Information 
+                          <a href="#">{{date.year}} 年 {{date.month}} 月</a>
                         </li>
-                        <li class="list-group-item">
-                            <span class="badge">50</span>
-                            Security 
-                        </li>
-                        <li class="list-group-item">
-                            <strong>其他分类</strong>
-                        </li>
-                        <li class="list-group-item">
-                            <span class="badge">104</span>
-                            Technology 
-                        </li>
-                        <li class="list-group-item">
-                            <span class="badge">34</span>
-                            Blogging 
-                        </li>
-                        <li class="list-group-item">
-                            <span class="badge">10</span>
-                            Information 
-                        </li>
-                        <li class="list-group-item">
-                            <span class="badge">50</span>
-                            Security 
-                        </li>
+                        {% endfor %}
                     </ul>
                     <br />
 
                     <ul class="list-group">
-                        <li class="list-group-item">最新文章
-                        </li>
                         <li class="list-group-item">
-                            <a href="#">
-                                <img src="assets/img/ad1.jpg" class="img-responsive" />
-                            </a>
-                            <br />
-                            <a href="#">
-                                <img src="assets/img/ad2.jpg" class="img-responsive" />
+                          <strong>最新文章</strong>
+                        </li>
+                          {% get_recent_posts as recent_post_list %}
+                          {% for post in recent_post_list %}
+                        <li class="list-group-item">
+                          <a href="{{ post.get_absolute_url  }}">{{post.title}}
                             </a>
                         </li>
+                        {% endfor %}
                     </ul>
 
                     <br />
