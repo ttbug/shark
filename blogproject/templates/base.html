@@ -88,7 +88,7 @@
                         {% get_categories as category_list %}
                         {% for category in category_list %}
                         <li class="list-group-item">
-                            <a href="#">{{category.name}}</a>
+                          <a href="{% url 'blog:category' category.pk %}">{{category.name}}</a>
                         </li>
                         {% endfor %}
                         <li class="list-group-item">
@@ -97,7 +97,7 @@
                         {% archives as date_list %}
                         {% for date in date_list %}
                         <li class="list-group-item">
-                          <a href="#">{{date.year}} 年 {{date.month}} 月</a>
+                          <a href="{% url 'blog:archives' date.year date.month %}">{{date.year}} 年 {{date.month}} 月</a>
                         </li>
                         {% endfor %}
                     </ul>
