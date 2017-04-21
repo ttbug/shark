@@ -63,6 +63,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'blog.views.global_settings',
             ],
         },
     },
@@ -122,3 +123,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
             os.path.join(BASE_DIR, "static"),
         ]
+
+# 添加网站描述
+SITE_NAME = "Bazinga"
+SITE_DESC = "The quieter you become, the more you are able to hear."
+CONNECT = "ttbuge@gmail.com"

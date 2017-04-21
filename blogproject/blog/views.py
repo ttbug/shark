@@ -1,6 +1,7 @@
 import markdown
 from django.shortcuts import render, get_object_or_404
 from .models import Post, Category, Tag
+from django.conf import settings
 # Create your views here.
 
 
@@ -40,3 +41,11 @@ def tags(request, pk):
     label = get_object_or_404(Tag, pk=pk)
     post_list = Post.objects.filter(tags=label)[::-1]
     return render(request, "blog/index.html", context={"post_list": post_list})
+
+
+def global_settings(request):
+    return {
+            "SITE_NAME": settings.SITE_NAME,
+            "SITE_DESC": settings.SITE_DESC,
+            "CONNECT": settings.CONNECT,
+    }

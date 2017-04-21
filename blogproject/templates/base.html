@@ -9,7 +9,7 @@
     <!--[if IE]>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <![endif]-->
-    <title>Bazinga</title>
+        <title>{{SITE_NAME}}</title>
     <!-- BOOTSTRAP CORE STYLE CSS -->
     {% load staticfiles %}
     <link href="{% static 'blog/css/bootstrap.css' %}" rel="stylesheet" />
@@ -35,8 +35,8 @@
                 <div class="col-md-5">
                     <h3>WHO M I :</h3>
 
-                     The quiter you become, the more you are able to hear.<br />
-                     You can reach me at <i><strong>ttbuge@gmail.com</strong></i>
+                    {{SITE_DESC}}<br />
+                    You can reach me at <i><strong>{{CONNECT}}</strong></i>
                 </div>
             </div>
         </div>
