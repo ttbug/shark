@@ -10,6 +10,10 @@ from django.urls import reverse
 class Category(models.Model):
     name = models.CharField(max_length=100)
 
+    class Meta:
+        verbose_name = "分类"
+        verbose_name_plural = verbose_name
+
     # 装饰器为了兼容python2
     def __str__(self):
         return self.name
@@ -19,6 +23,10 @@ class Category(models.Model):
 @python_2_unicode_compatible
 class Tag(models.Model):
     name = models.CharField(max_length=100)
+
+    class Meta:
+        verbose_name = "标签"
+        verbose_name_plural = verbose_name
 
     # 装饰器为了兼容python2
     def __str__(self):
@@ -37,7 +45,7 @@ class Post(models.Model):
     modified_time = models.DateTimeField(auto_now=True)
 
     # 文章摘要，可以为空
-    excerpt = models.CharField(max_length=100, blank=True)
+    excerpt = models.CharField(max_length=200, blank=True)
 
     # 分类与标签，使用外键,一篇文章可以对应多个标签，一个标签也可以
     # 对应多篇文章，使用ManyToManyField
@@ -53,3 +61,7 @@ class Post(models.Model):
     # blog:detail表示blog应用下的name=detail函数
     def get_absolute_url(self):
         return reverse('blog:detail', kwargs={'pk': self.pk})
+
+    class Meta:
+        verbose_name = "文章"
+        verbose_name_plural = verbose_name
