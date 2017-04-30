@@ -58,3 +58,15 @@ def global_settings(request):
             "SITE_DESC": settings.SITE_DESC,
             "CONNECT": settings.CONNECT,
     }
+
+
+def search(request):
+    key = request.GET.get("key")
+    err_msg = ""
+
+    if not key:
+        err_msg = "请输入关键词"
+        return render(request, 'blog/errors.html', {"err_msg": err_msg})
+
+    post_list = Post.objects.filter(title__icontains=key)
+    return render(request, 'blog/results.html', {"err_msg": err_msg, "post_list": post_list})

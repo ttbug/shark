@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content%}
+{% if err_msg %}
+    <p>{{ err_msg }}<p>
+{% endif%}
+{% for post in post_list %}
+     <div class="blog-main">
+     <div class="heading-blog">
+        <h2><a href="{{post.get_absolute_url}}">{{post.title}}</a><h2>
+     </div>
+     <div class="blog-info">
+        <span class="label label-primary">Posted on {{post.create_time}}</span>
+         <span class="label label-success">In {{post.category}}</span>
+         <span class="label label-danger">By {{post.author}}</span>
+         <span class="label label-info">
+           <i class="fa fa-thumbs-up"></i>+ 10
+           <i class="fa fa-thumbs-down"></i>-3
+         </span>
+     </div>
+     <div class="blog-txt">
+        <p>{{post.excerpt}}</p>
+     </div>
+  </div>
+{% empty %}
+  <div class="no-post">
+    没有搜索到符合条件的文章
+  </div>
+{% endfor %}
+{% endblock content%}

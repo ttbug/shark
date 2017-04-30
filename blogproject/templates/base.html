@@ -82,7 +82,13 @@
                 {% include "paginator.html" %}
                 </div>
                 <div class="col-md-3">
-
+                  <form class="form-inline" method="get" action="{% url "blog:search" %}">{% csrf_token %}
+                    <div class="form-group">
+                    <input class="form-control" name="key" type="search" placeholder="搜索" required>
+                    <button class="btn btn-primary" type="submit">搜索</button>
+                    </div>
+                  </form>
+                    <br/>
                     <ul class="list-group">
                         <li class="list-group-item">
                             <strong>文章分类</strong>
