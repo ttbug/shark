@@ -33,24 +33,24 @@ body {
 .blog-main {
     padding:10px 5px;
     border-bottom:2px solid #065883;
-    margin-bottom:30px;
+    /*margin-bottom:30px;*/
 }
 .heading-blog {
     font-size:30px;
     color:#065883;
     font-weight:800;
-    padding:30px 5px;
+    /*padding:30px 5px;*/
     line-height:40px;
 }
 .blog-info {
-    padding:20px 5px; 
-    font-size:20px;
+    /*padding:20px 5px; 
+    font-size:20px;*/
     font-weight:normal;
 }
 .blog-txt {
-    padding:20px 5px; 
+    padding:18px 5px; 
     font-family:Andalus ;
-    font-size:20px;    
+    font-size:16px;    
     font-weight:normal;
 }
 .set-foot {
