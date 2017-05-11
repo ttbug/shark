@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+{% if msg %}
+<div class="alert alert-danger" role="alert">{{msg}}</div>
+{% endif %}
+<br/><br/>
+<div class="col-sm-2">
+</div>
+<div class="col-sm-8">
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">用户注册</h3>
+  </div>
+  <div class="panel-body">
+    <form method="POST">{% csrf_token %}
+      <div class="input-group">
+        <span class="input-group-addon">用户名 </span>
+        <input type="text" class="form-control" id="id_name" placeholder="用户名" name="username">
+      </div>
+      <br/>
+      <div class="input-group">
+        <span class="input-group-addon">密码  </span>
+        <input type="password" class="form-control" id="id_password" placeholder="密码" name="passwd">
+      </div>
+      <br/>
+      <div class="input-group">
+        <span class="input-group-addon">确认密码</span>
+        <input type="password" class="form-control" id="id_password" placeholder="确认密码" name="re_passwd">
+      </div>
+      <br/>
+      <div class="input-group">
+        <span class="input-group-addon">邮箱  </span>
+        <input type="email" class="form-control" id="id_email" placeholder="邮箱" name="email">
+      </div>
+      <br/>
+      <input class="btn btn-primary" type="submit" value="注册">
+    </form>
+  </div>
+  <div class="panel-footer">
+    <a href="#">已有账号？点击此处去登陆吧......</a>
+  </div>
+</div>
+</div>
+<div class="col-sm-2">
+</div>
+{% endblock %}

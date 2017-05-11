@@ -3,6 +3,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 blogproject/db.sqlite3
+blogproject/blogproject/secret.py
 # C extensions
 *.so
 
