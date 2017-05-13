@@ -131,3 +131,5 @@ STATICFILES_DIRS = [
 SITE_NAME = "Bazinga"
 SITE_DESC = "The quieter you become, the more you are able to hear."
 CONNECT = "ttbuge@gmail.com"
+
+LOGIN_REDIRECT_URL = '/'

@@ -30,8 +30,24 @@
     <section class="header-section">
         <div class="container">
             <div class="row">
+							<div class="header-nav">
+              <div class="nav pull-right">
+                <a href="{% url "blog:index" %}">首 页</a>&nbsp;&nbsp;
+                <a href="#">分 类</a>&nbsp;&nbsp;
+                <a href="#">标 签</a>&nbsp;&nbsp;
+                <a href="#">关于</a>&nbsp;&nbsp;
+                {% if user.is_authenticated %}
+                <a href="#">{{user.username}}</a>
+                <a href="/usercenter/accounts/logout">注销</a>
+              {% else %}
+              <a href="/usercenter/accounts/login" >注册/登陆</a>
+              {% endif %}
+              </div>
+             </div>
+				    </div>
+            <div class="row">
                 <div class="col-md-2">
-                  <img src="{% static 'blog/img/person.jpg' %}" class="img-circle img-responsive" />
+                  <a href="{% url "blog:index"%}"><img src="{% static 'blog/img/person.jpg' %}" class="img-circle img-responsive" alt="点击图片返回首页"/></a>
                 </div>
                 <div class="col-md-5 text-center">
                     <h1><strong>Colin Hu </strong></h1>
@@ -42,14 +58,13 @@
 
                     {{SITE_DESC}}<br />
                     You can reach me at <i><strong>{{CONNECT}}</strong></i>
-                    or <a href="{% url "usercenter:register"%}">注册/登陆</a>
                 </div>
             </div>
         </div>
     </section>
     <!--HOME SECTION END-->
 
-    <section>
+    <!--section>
         <div class="container">
             <div class="row">
                 <div class="col-md-2 spon-txt">
@@ -62,9 +77,9 @@
 
             </div>
         </div>
-    </section>
+    </section-->
     <!--SPONSORS SECTION END-->
-    <hr />
+    <br />
     <section>
         <div class="container">
             <div class="row">
@@ -87,6 +102,7 @@
                 {% include "paginator.html" %}
                 </div>
                 <div class="col-md-3">
+                  <br/>
                   <form class="form-inline" method="get" action="{% url "blog:search" %}">{% csrf_token %}
                     <div class="form-group">
                     <input class="form-control" name="key" type="search" placeholder="搜索" required>

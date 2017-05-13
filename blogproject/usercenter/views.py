@@ -66,7 +66,6 @@ def register(request):
 def activate(request, code):
     # 找到注册时创建的实例
     acts = ActivateCode.objects.filter(code=code, expire_timestamp__gte=timezone.now())
-    print(acts)
     if acts.count() > 0:
         code_record = acts[0]
         code_record.user.is_active = True
